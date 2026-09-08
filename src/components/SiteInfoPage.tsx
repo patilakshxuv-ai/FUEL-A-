@@ -88,7 +88,11 @@ export const SiteInfoPage: React.FC<SiteInfoPageProps> = ({ page, onBack }) => {
         {page === 'contact' && (
           <>
             <Section title="Feedback and corrections">
-              If you notice an incorrect guide, broken link, outdated assumption or usability problem, please contact the site owner through the official contact channel associated with this website.
+              If you notice an incorrect guide, broken link, outdated assumption or usability problem, email{' '}
+              <a className="font-bold text-[#059669] underline" href="mailto:patilakshxuv@gmail.com">
+                patilakshxuv@gmail.com
+              </a>
+              .
             </Section>
             <Section title="Business and partnership enquiries">
               Advertising, publishing and partnership enquiries should include the relevant page URL, a short description of the request and a preferred reply method.
