@@ -28,6 +28,7 @@ import { TripHistoryModal } from './components/TripHistoryModal';
 import { PrivacyPolicyModal } from './components/PrivacyPolicyModal';
 import { AdKeeperWidget } from './components/AdKeeperWidget';
 import { PayPalPaymentSection } from './components/PayPalPaymentSection';
+import { Analytics } from '@vercel/analytics/react';
 import { SeoLandingPageView } from './components/SeoLandingPageView';
 import { SeoDirectorySection } from './components/SeoDirectorySection';
 import { SEO_LANDING_PAGES, SeoLandingPage, getSeoPageBySlug } from './data/seoLandingPages';
@@ -708,6 +709,9 @@ export default function App() {
           }
         }}
       />
+
+      {/* Vercel Web Analytics */}
+      <Analytics />
     </div>
   );
 }
