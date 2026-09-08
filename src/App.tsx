@@ -34,6 +34,7 @@ import { SEO_LANDING_PAGES, SeoLandingPage, getSeoPageBySlug } from './data/seoL
 import { Activity, Download, Sparkles, Navigation, Layers, ShieldCheck, Compass } from 'lucide-react';
 import { SiteInfoPage } from './components/SiteInfoPage';
 import type { SitePageKey } from './components/SiteInfoPage';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 
 const STORAGE_KEY = 'fuelpath_saved_trips_v1';
 
@@ -708,6 +709,9 @@ export default function App() {
           }
         }}
       />
+
+      {/* Vercel Speed Insights */}
+      <SpeedInsights />
     </div>
   );
 }
