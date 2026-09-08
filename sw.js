@@ -1,18 +1,1 @@
-const CACHE = 'fuelpath-pro-v1';
-self.addEventListener('install', (event) => {
-  event.waitUntil(caches.open(CACHE).then((cache) => cache.addAll(['/','/index.html'])));
-  self.skipWaiting();
-});
-self.addEventListener('activate', (event) => {
-  event.waitUntil(self.clients.claim());
-});
-self.addEventListener('fetch', (event) => {
-  if (event.request.method !== 'GET') return;
-  event.respondWith(
-    caches.match(event.request).then((cached) => cached || fetch(event.request).then((response) => {
-      const copy = response.clone();
-      caches.open(CACHE).then((cache) => cache.put(event.request, copy));
-      return response;
-    }).catch(() => caches.match('/index.html')))
-  );
-});
+const CACHE = 'fuelpath-pro-v1';\nself.addEventListener('install', (event) => {\n  event.waitUntil(caches.open(CACHE).then((cache) => cache.addAll(['/','/index.html'])));\n  self.skipWaiting();\n});\nself.addEventListener('activate', (event) => {\n  event.waitUntil(self.clients.claim());\n});\nself.addEventListener('fetch', (event) => {\n  if (event.request.method !== 'GET') return;\n  event.respondWith(\n    caches.match(event.request).then((cached) => cached || fetch(event.request).then((response) => {\n      const copy = response.clone();\n      caches.open(CACHE).then((cache) => cache.put(event.request, copy));\n      return response;\n    }).catch(() => caches.match('/index.html')))\n  );\n});

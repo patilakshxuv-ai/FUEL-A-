@@ -1,4 +1,1 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://lovely-caramel-1f92c1.netlify.app/sitemap.xml
+User-agent: *\nAllow: /\n\nSitemap: https://lovely-caramel-1f92c1.netlify.app/sitemap.xml
