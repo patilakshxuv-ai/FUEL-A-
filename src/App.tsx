@@ -623,6 +623,20 @@ export default function App() {
               onLoadIntoCalculator={handleLoadSeoIntoCalculator}
             />
 
+            <GoogleAdSenseUnit
+              adSlot="9023760691"
+              adFormat="fluid"
+              adLayoutKey="-f8-12-44-fb+1ey"
+              fluid
+            />
+
+            <GoogleAdSenseUnit
+              adSlot="4341234130"
+              adFormat="auto"
+              fullWidthResponsive
+              fluid
+            />
+
             {/* AdKeeper Sponsored Unit 2076075 */}
             <AdKeeperWidget widgetId="2076075" title="Verified Partner Promos & Automotive Deals" />
 

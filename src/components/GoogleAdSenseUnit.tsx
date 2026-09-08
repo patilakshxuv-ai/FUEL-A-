@@ -9,14 +9,18 @@ declare global {
 interface GoogleAdSenseUnitProps {
   adSlot?: string;
   adLayout?: string;
+  adLayoutKey?: string;
   adFormat?: string;
+  fullWidthResponsive?: boolean;
   fluid?: boolean;
 }
 
 export const GoogleAdSenseUnit: React.FC<GoogleAdSenseUnitProps> = ({
   adSlot = '2458352341',
   adLayout,
+  adLayoutKey,
   adFormat,
+  fullWidthResponsive = false,
   fluid = false,
 }) => {
   const adRef = useRef<HTMLElement>(null);
@@ -54,7 +58,9 @@ export const GoogleAdSenseUnit: React.FC<GoogleAdSenseUnitProps> = ({
           data-ad-client="ca-pub-1968815211562572"
           data-ad-slot={adSlot}
           {...(adLayout ? { 'data-ad-layout': adLayout } : {})}
+          {...(adLayoutKey ? { 'data-ad-layout-key': adLayoutKey } : {})}
           {...(adFormat ? { 'data-ad-format': adFormat } : {})}
+          {...(fullWidthResponsive ? { 'data-full-width-responsive': 'true' } : {})}
         />
       </div>
     </div>
