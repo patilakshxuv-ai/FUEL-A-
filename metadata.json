@@ -1,0 +1,6 @@
+{
+  "name": "Fuel Cost Calculator",
+  "description": "Production-ready fuel expense & mileage calculator with instant INR (₹) and USD ($) currency telemetry, route splitting, commute budget projections, verified PayPal payments, and app store PWA compliance.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
