@@ -27,6 +27,7 @@ import { SplitPaymentModal } from './components/SplitPaymentModal';
 import { TripHistoryModal } from './components/TripHistoryModal';
 import { PrivacyPolicyModal } from './components/PrivacyPolicyModal';
 import { AdKeeperWidget } from './components/AdKeeperWidget';
+import { GoogleAdSenseUnit } from './components/GoogleAdSenseUnit';
 import { PayPalPaymentSection } from './components/PayPalPaymentSection';
 import { SeoLandingPageView } from './components/SeoLandingPageView';
 import { SeoDirectorySection } from './components/SeoDirectorySection';
@@ -516,6 +517,7 @@ export default function App() {
 
         {/* Top High-Visibility Sponsored Ad 2076062 */}
         <AdKeeperWidget widgetId="2076062" title="Featured Partner Offers & Travel Savings" />
+        <GoogleAdSenseUnit />
 
         {/* View Switch: informational page, SEO guide, or interactive calculator */}
         {activeSitePage ? (
@@ -557,6 +559,13 @@ export default function App() {
                   onChangeInput={setInput}
                   selectedVehicleId={selectedVehicleId}
                   onSelectVehicle={handleSelectVehicle}
+                />
+
+                <GoogleAdSenseUnit
+                  adSlot="8369274719"
+                  adLayout="in-article"
+                  adFormat="fluid"
+                  fluid
                 />
 
                 {/* PayPal Visitor Payment Section */}
